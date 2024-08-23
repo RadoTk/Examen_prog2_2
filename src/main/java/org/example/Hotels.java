@@ -85,6 +85,13 @@ public class Hotels extends Lieux {
         this.avisHotel.add(avis);
     }
 
+    public static void afficherAvisHotel(Hotels hotel) {
+        List<Avis> avis = hotel.getAvisHotel();
+        System.out.println("Avis pour l'hôtel " + hotel.getNom() + " :");
+        for (Avis a : avis) {
+            System.out.println(a);
+        }
+    }
 
 
 

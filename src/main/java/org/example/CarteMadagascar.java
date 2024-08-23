@@ -3,6 +3,10 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.example.Chambres.afficherAvisChambre;
+import static org.example.Hotels.afficherAvisHotel;
+import static org.example.Parc.afficherAvisParc;
+
 public class CarteMadagascar {
     private List<Hotels> hotels;
     private List<Parc> parcs;
@@ -50,5 +54,17 @@ public class CarteMadagascar {
             }
         }
         return hotelAvecLePlusDeParcs;
+    }
+
+    public static void afficherTousLesAvis(List<Hotels> hotels) {
+        for (Hotels hotel : hotels) {
+            afficherAvisHotel(hotel);
+            for (Chambres chambre : hotel.getChambres()) {
+                afficherAvisChambre(chambre);
+            }
+            for (Parc parc : hotel.getParcs()) {
+                afficherAvisParc(parc);
+            }
+        }
     }
 }

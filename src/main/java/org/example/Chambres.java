@@ -60,6 +60,14 @@ public class Chambres {
                 ", avis=" + avis +
                 '}';
     }
+
+    public static void afficherAvisChambre(Chambres chambre) {
+        List<Avis> avis = chambre.getAvis();
+        System.out.println("Avis pour la chambre " + chambre.getNumeroDeChambre() + " :");
+        for (Avis a : avis) {
+            System.out.println(a);
+        }
+    }
 }
 
 
